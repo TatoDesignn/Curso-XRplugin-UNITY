@@ -75,7 +75,7 @@
 <ul>
   <li>Crear un nuevo script por ejem: "ActivateTeleport"</li>
   <li>Agregar estas líneas de código:</li>
-  <img src="">
+  <img src="https://github.com/TatoDesign/Repositorios-Imagenes/blob/main/XRPlugin/image.png">
   <li>Básicamente este script lo que hace es: una referencia al objeto del rayo el cual se activa si el botón se está presionando</li>
   <li>Agregamos el Script al empty "XR Origin"</li>
 </ul>
