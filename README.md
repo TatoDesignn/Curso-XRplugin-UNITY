@@ -25,6 +25,8 @@
   <li><strong>Snap Turn Provider (Action-based):</strong> Giro quebrado</li>
   <li><strong>Character Controller Driver:</strong> para tener un mejor manejo del character controller</li>
   <li><strong>XR Direct interactor:</strong> Componente para el interactuante</li>
+  <li><strong>XR Simple interactable:</strong> Componente para el Interactuable</li>
+  <li><strong>XR Grab Interactable:</strong> Componente para agarrar el Interactuable</li>
 </ul>
 <h2>Configuración Cámara 🎥</h2>
 <ol>
@@ -90,4 +92,33 @@
   <li>En el empty "XR origin" agregamos el componente "Snap Turn Provider (Action-based)"</li>
   <li>Este script debemos de pasarle el componente "Locomotion System"</li>
   <li>por ultimo agregar las entradas de los controles, marcar "Use Reference" y seleccionar "XR RightHand Locomotion/Snap Turn"</li>
+</ul>
+<h2>Configuración interacción con objetos 📦</h2>
+<p><strong>Interactuante:</strong> Establece el tipo de interacción que se desea y es interrumpible.</p>
+<p><strong>Interactuable:</strong> Como responde el objeto a esta interacción.</p>
+<ul>
+  <strong>Interactuante:</strong>
+  <ol>
+    <li>En el empty de los controles agregar el componente "XR Direct Interactor"</li>
+    <li>Asignar la referencia en Interaction Manager a "XR interaction manager"</li>
+    <li>Agregar un sphere collider y marcarla como trigger</li>
+  </ol>
+  <strong>Interactuable:</strong>
+  <ul>
+    <strong>Interactuable simple:</strong>
+    <ol>
+      <li>Creamos un objeto al cual le agregaremos un rigidbody</li>
+      <li>Agregamos el componente "XR Simple interactable"</li>
+      <li>En "Interactable Events" encontraremos los diferentes eventos que podemos modificar</li>
+    </ol>
+    <strong>Interactuable agarrar:</strong>
+    <ol>
+      <li>Agregar al objeto que deseamos agarrar el componente "XR Grab Interactable"</li>
+      <li>Agregar un "Rigidbody"</li>
+      <li>Modificar el "Movement Type" a lo que se necesite, la mejor es "velocity tracking"</li>
+      <li>Si desea que el objeto se agarrado desde un punto en específico, crea un empty y ubícalo en el lugar correspondiente</li>
+      <li>En el script "XR Grab interactable" agregar en Attach transform la referencia del punto de ubicación</li>
+      <li>Si desea que el objeto sea agarrado desde cualquier punto, en el script marcar la opción "Use Dynamic Attach"</li>
+    </ol>
+  </ul>
 </ul>
