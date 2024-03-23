@@ -122,3 +122,10 @@
     </ol>
   </ul>
 </ul>
+<h2>Configuración de interfaces 🖥️</h2>
+<ol>
+  <li>Crear un canvas con todos los elementos que deseamos agregar</li>
+  <li>En el canvas cambiar el "Render Mode" por "World Space" y cambiar la escala en "X,Y,Z" por "0.001" y ajustarlo a la posición deseada</li>
+  <li>Eliminar el componente "Graphic Raycaster" y agregar el componente "Tracked Device Graphic Raycaster"</li>
+  <li>En el empty "EventSystem" eliminar el componente "Standalone Input Module" y agregar el componente "XR UI Input Module"</li>
+</ol>
